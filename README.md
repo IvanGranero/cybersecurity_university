@@ -11,6 +11,12 @@ https://commusense.com/aggarwal/loginurl?user=user&password=userpass
 
 In this example if the user and password are valid the API will return the complete user information
 
-Now let's demonstrate the vulnerability by injecting a verb in this case a not equal $ne so everything will be true.
+Now let's demonstrate the vulnerability by injecting a not equal verb $ne so every comparison within the database will be true
 
 https://commusense.com/aggarwal/loginurl?user=user&password[%24ne]=
+
+In this example it will return not only the user input but all the registers within the database.
+
+
+... it also works for POST requests!
+

@@ -91,6 +91,25 @@ const changePassword = async (req, res) => {
 
 };
 
+const changePasswordSanitize = async (req, res) => {
+    try {
+        //"username": {"$ne": 1},
+        un = sanitize(req.body.username);
+        User.findOneAndUpdate({username: un}, {password: req.body.password}, {new: true}, (err, user) => {
+            if (err) {
+                res.send(err);
+            } else {
+                res.json(user);
+            }
+        })
+    } catch (err) {
+        console.log(err);
+    }
+
+};
+
+
+
 const deleteUser = async (req, res) => {
     try {
         User.deleteOne({_id: req.params.userID}, (err, user) => {
@@ -113,5 +132,6 @@ module.exports = {
     login,
     register,
     changePassword,
+    changePasswordSanitize,
     deleteUser
 }

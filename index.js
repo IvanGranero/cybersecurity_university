@@ -14,6 +14,8 @@ app.post('/register', controller.register);
 
 app.put('/changePassword', controller.changePassword);
 
+app.put('/changePasswordSanitize', controller.changePasswordSanitize);
+
 app.delete('/deleteUser', controller.deleteUser);
 
 app.listen(PORT, () => {

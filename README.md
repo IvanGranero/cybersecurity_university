@@ -36,14 +36,21 @@ and within the body of the request add the following JSON
   "password": "newHackedPassword"
 }
 
-when doing so, the first user encounter within the database will update the password to "newHackedPassword".
+when doing so, the first user encounter within the database will be updated to the password to "newHackedPassword" and the API will return the user data including the newly changed password.
 
-for our example we used POSTMAN
+for our example we have used POSTMAN which can be downloaded here:
 https://www.postman.com/downloads/
 
+The screenshot below shows the input provided into POSTMAN
 
+<img width="844" alt="Screen Shot 2021-12-24 at 7 36 35 PM" src="https://user-images.githubusercontent.com/47937620/147375557-f7eb16c9-2366-47b3-879d-e5fde53f727b.png">
 
-....
+Let's now try the same injection with a sanitized API provided within https://commusense.com/aggarwal/changePasswordSanitize
 
-... it also works for POST requests!
+<img width="843" alt="Screen Shot 2021-12-24 at 7 39 09 PM" src="https://user-images.githubusercontent.com/47937620/147375586-cc88432d-6357-4234-a1f6-357b4eb27c86.png">
+
+in this case the injection has been mitigated and the database is no longer vulnarable.
+
+Note: The same API can be used to demonstrate User Enumaration however is not covered within this README.
+
 

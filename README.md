@@ -19,10 +19,10 @@ With this injection the API will return all users's information from the databas
 
 some of the lessons learned from the above are:
 
-* To not use get requests when passing credentials
-* To hash and salt passwords
-* To validate user input
-* To sanitize queries
+* Use POST instead of GET requests when passing credentials
+* Hash and salt passwords
+* Validate user input
+* Sanitize queries
 
 Now let's try an injection using a POST or PUT request by using the /changePassword provided by this API
 

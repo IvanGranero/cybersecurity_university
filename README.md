@@ -5,11 +5,15 @@ combination of validating the user supplied data, sanitizing the SQL or Mongo in
 
 To demonstrate this common vulnerability this API has been developed providing an insecure loginurl as well as a secure version for it
 
-let's login to our api with the user and userpass credentials
+let's login to our api with the user and incorrect password credentials
+
+https://commusense.com/aggarwal/loginurl?user=user&password=notcorrect
+
+returning a Username not valid message as expected, now let's request to login with the correct credentials
 
 https://commusense.com/aggarwal/loginurl?user=user&password=userpass
 
-In this example if the user and password are valid the API will return the complete user information
+With the user and password being valid the API will return the complete user information
 
 Now let's demonstrate the vulnerability by injecting a not equal verb $ne so every comparison within the database will be true
 

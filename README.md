@@ -1,6 +1,6 @@
 # cybersecurity_university
 ## NoSQL Injection
-SQL or NoSQL injection is a vulnerability of a web site via javascript injection or verb injection, which can be mitigated with a 
+SQL or NoSQL injection is an attack to a vulnarable website via javascript injection or verb injection, which can be mitigated with a 
 combination of validating the user supplied data, sanitizing the SQL or Mongo input and by setting javascriptEnabled to false in your mongod.conf
 
 To demonstrate this common vulnerability this API has been developed providing an insecure loginurl as well as a secure version for it
